@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Engagement&family=Honk&family=Oooh+Baby&display=swap');
+/*Used flexbpx stackes title and buttons in column and centers them and they fill the screen*/
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+}
+/*maintains the center format*/
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+/*used google font*/
+.box1 {
+  font-family: "Honk", system-ui;
+
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 15,
+    "SHLN" 50;
+    font-size: 60px;
+    margin: 5px;
+}
+/*set background color for button adn basic styling*/
+.box2{
+    background-color: #FFFA01;
+    margin: 5px;
+    padding: 8px;
+    font-size: 20px;
+}
+/*set background color for button adn basic styling*/
+.box3{
+    background-color: #FD8294;
+    margin: 5px;
+    font-size: 20px;
+    padding: 8px;
+}
+/*set the background image for entire page and set it to cover the whole page as one image*/
+.entire{
+    background-image: url(images/gymfloor.jpg);
+    background-size: cover;
+}
+/*Changes display at next size up*/
+@media (min-width: 596px) {
+    /*changes the layout to be title on top buttons in a row below that aand used styling to keep everything clean*/
+   .buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 15px;
+    align-items: center;    
+  }
+  /*adjusts font size for bigger screen*/
+  .box2, .box3 {
+    font-size: 20px;
+    
+  }
+}
+/*Changes at next screen size*/
+@media (min-width: 720px) {
+/*adjusts layout so the title appears on left and buttons in same row to the right of title*/
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .box2, .box3 {
+    font-size: 20px;
+    padding: 10px 16px;
+  }
+}
+/*changes display at biggest size*/
+@media (min-width: 996px) {
+/*keeps everything in a single row*/
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+  }
+  /*puts the title portion 2nd in order and in center of screen*/
+   .box1 {
+    flex: 1;
+    text-align: center;
+    order: 2;
+    align-self: center;
+  }
+
+  .buttons {
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+  }
+/*puts the home button 1st in order and at far left side of screen*/
+  .box2 {
+    margin-right: auto;
+    order: 1;
+    align-self: flex-start;
+  }
+  /*puts contact us botton 3rd in order and at far right side of screen*/
+  .box3 {
+    margin-left: auto;
+    order: 3;
+    align-self: flex-end;
+  }
+}
+
