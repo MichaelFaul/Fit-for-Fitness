@@ -43,6 +43,17 @@ nav{
     background-image: url(images/gymfloor.jpg);
     background-size: cover;
 }
+
+.form-group
+{
+  padding:10px;
+}
+
+label
+{
+  font-weight:bold;
+}
+
 /*Changes display at next size up*/
 @media (min-width: 596px) {
     /*changes the layout to be title on top buttons in a row below that aand used styling to keep everything clean*/
@@ -93,7 +104,7 @@ nav{
   }
 
   .buttons {
-    flex: 2;
+    flex: 1;
     display: flex;
     justify-content: flex-start;
   }
